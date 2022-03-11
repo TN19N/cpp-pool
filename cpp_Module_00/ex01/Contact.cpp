@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 07:42:10 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/10 10:58:28 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/10 18:55:10 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ std::string	Contact::get_darkest_secret(void) const {
 	return (this->darkest_secret);
 }
 
-int	Contact::set_first_name(std::string const str) const {
+int	Contact::set_first_name(std::string const str) {
 	for (int i = 0; str[i]; i++)
 	{
 		if (!std::isalpha(str[i]))
@@ -42,7 +42,7 @@ int	Contact::set_first_name(std::string const str) const {
 	return (1);
 }
 
-int	Contact::set_last_name(std::string const str) const {
+int	Contact::set_last_name(std::string const str) {
 	for (int i = 0; str[i]; i++)
 	{
 		if (!std::isalpha(str[i]))
@@ -52,7 +52,7 @@ int	Contact::set_last_name(std::string const str) const {
 	return (1);
 }
 
-int	Contact::set_nickname(std::string const str) const {
+int	Contact::set_nickname(std::string const str) {
 	for (int i = 0; str[i]; i++)
 	{
 		if (!std::isalpha(str[i]))
@@ -62,7 +62,7 @@ int	Contact::set_nickname(std::string const str) const {
 	return (1);
 }
 
-int	Contact::set_phone_number(std::string const str) const {
+int	Contact::set_phone_number(std::string const str) {
 	for (int i = 0; str[i]; i++)
 	{
 		if (!std::isdigit(str[i]))
@@ -72,7 +72,7 @@ int	Contact::set_phone_number(std::string const str) const {
 	return (1);
 }
 
-int	Contact::set_darkest_secret(std::string const str) const {
+int	Contact::set_darkest_secret(std::string const str) {
 	for (int i = 0; str[i]; i++)
 	{
 		if (!std::isprint(str[i]))

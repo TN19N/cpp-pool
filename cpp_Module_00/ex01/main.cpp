@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 10:28:19 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/10 10:46:47 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/10 20:34:50 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@ int main()
 	PhoneBook	phonebook;
 	std::string	buffer;
 
+	phonebook.index = 0;
 	std::cout << "usage: 'ADD' to add contact, 'SEARCH' to search for contact, 'EXIT' to exit from the programme" << std::endl;
 	while (1)
 	{
-		std::cout << "enter some then : ";
-		std::cin >> buffer;
+		std::cout << "phonebook $> ";
+		std::getline(std::cin , buffer);
 		
 		if (!buffer.length())
 		{
@@ -39,7 +40,7 @@ int main()
 		}
 		else
 		{
-			std::cout << "(cmd dont exits) :(" << std::endl
+			std::cout << "(cmd dont exits) :)" << std::endl
 					  << "usage :" << std::endl
 					  << "'ADD' to add contact" << std::endl
 					  << "'SEARCH' to search for contact" << std::endl
