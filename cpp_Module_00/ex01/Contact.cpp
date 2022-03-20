@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 07:42:10 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/10 18:55:10 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/20 11:59:08 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	Contact::set_first_name(std::string const str) {
 		if (!std::isalpha(str[i]))
 			return 0;
 	}
+	if (!str.length())
+		return (0);
 	this->first_name = str;
 	return (1);
 }
@@ -48,6 +50,8 @@ int	Contact::set_last_name(std::string const str) {
 		if (!std::isalpha(str[i]))
 			return (0);
 	}
+	if (!str.length())
+		return (0);
 	this->last_name = str;
 	return (1);
 }
@@ -58,6 +62,8 @@ int	Contact::set_nickname(std::string const str) {
 		if (!std::isalpha(str[i]))
 			return (0);
 	}
+	if (!str.length())
+		return (0);
 	this->nickname = str;
 	return (1);
 }
@@ -68,6 +74,8 @@ int	Contact::set_phone_number(std::string const str) {
 		if (!std::isdigit(str[i]))
 			return (0);
 	}
+	if (!str.length())
+		return (0);
 	this->phone_number = str;
 	return (1);
 }
@@ -78,6 +86,8 @@ int	Contact::set_darkest_secret(std::string const str) {
 		if (!std::isprint(str[i]))
 			return (0);
 	}
+	if (!str.length())
+		return (0);
 	this->phone_number = str;
 	return (1);
 }

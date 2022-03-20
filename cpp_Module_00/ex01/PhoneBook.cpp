@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 09:12:40 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/10 20:34:46 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/20 15:00:45 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,45 +18,60 @@ void	PhoneBook::add(void)
 
 	if (this->index == 7)
 		this->index = 0;
-	std::cout << "enter first_name : ";
-	std::getline(std::cin, tmp);
-	while (!this->contacts[this->index].set_first_name(tmp))
+	while (1337)
 	{
-		std::cout << "enter just alphabet !!" << std::endl;
 		std::cout << "enter first_name : ";
 		std::getline(std::cin, tmp);
+		//if (std::cin.eof())
+		//	std::cout << "hhhhhhhhh" << std::endl; exit(1);
+		if (!this->contacts[this->index].set_first_name(tmp))
+			std::cout << "enter just alphabetman ascii !!" << std::endl;
+		else
+			std::cout << "vvvvvvv" << std::endl; break ;
 	}
-	std::cout << "enter the last_name : ";
-	std::getline(std::cin, tmp);
-	while (!this->contacts[this->index].set_last_name(tmp))
+	while (1337)
 	{
-		std::cout << "enter just alphabet !!" << std::endl;
 		std::cout << "enter the last_name : ";
 		std::getline(std::cin, tmp);
+		if (std::cin.eof())
+			std::cout << std::endl; exit(1);
+		if (!this->contacts[this->index].set_last_name(tmp))
+			std::cout << "enter just alphabet !!" << std::endl;
+		else
+			break ;
 	}
-	std::cout << "enter the nickname : ";
-	std::getline(std::cin, tmp);
-	while (!this->contacts[this->index].set_nickname(tmp))
+	while (1337)
 	{
-		std::cout << "enter just alphabet !!" << std::endl;
 		std::cout << "enter the nickname : ";
 		std::getline(std::cin, tmp);
+		if (std::cin.eof())
+			std::cout << std::endl; exit(1);
+		if (!this->contacts[this->index].set_nickname(tmp))
+			std::cout << "enter just alphabet !!" << std::endl;
+		else
+			break ;
 	}
-	std::cout << "enter the phone_number : ";
-	std::getline(std::cin, tmp);
-	while (!this->contacts[this->index].set_phone_number(tmp))
+	while (1337)
 	{
-		std::cout << "enter just digits !!" << std::endl;
 		std::cout << "enter the phone_number : ";
 		std::getline(std::cin, tmp);
+		if (std::cin.eof())
+			std::cout << std::endl; exit(1);
+		if (!this->contacts[this->index].set_phone_number(tmp))
+			std::cout << "enter just digits !!" << std::endl;
+		else
+			break ;
 	}
-	std::cout << "enter the darkest_secret : ";
-	std::getline(std::cin, tmp);
-	while (!this->contacts[this->index].set_darkest_secret(tmp))
+	while (1337)
 	{
-		std::cout << "enter just printable characters !!" << std::endl;
 		std::cout << "enter the darkest_secret : ";
 		std::getline(std::cin, tmp);
+		if (std::cin.eof())
+			std::cout << std::endl; exit(1);
+		if (!this->contacts[this->index].set_darkest_secret(tmp))
+			std::cout << "enter just printable characters !!" << std::endl;
+		else
+			break ;
 	}
 	this->index++;
 }

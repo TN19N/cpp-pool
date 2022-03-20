@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 10:28:19 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/10 20:34:50 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/20 12:53:57 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ int main()
 		std::cout << "phonebook $> ";
 		std::getline(std::cin , buffer);
 		
-		if (!buffer.length())
+		if (std::cin.eof())
 		{
-			std::cout << std::endl;
-			break;
+		 	std::cout << std::endl;
+		 	break;
 		}
-		else if (!buffer.compare("ADD"))
+		if (!buffer.compare("ADD"))
 			phonebook.add();
 		else if (!buffer.compare("SEARCH"))
 			phonebook.search();
