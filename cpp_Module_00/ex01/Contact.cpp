@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 07:42:10 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/20 11:59:08 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/21 09:34:10 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,6 @@ int	Contact::set_darkest_secret(std::string const str) {
 	}
 	if (!str.length())
 		return (0);
-	this->phone_number = str;
+	this->darkest_secret = str;
 	return (1);
 }

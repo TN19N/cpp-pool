@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 10:59:40 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/20 11:57:05 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/21 08:11:34 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 # include <cstring>
 # include <iostream>
+# include <iomanip>
 
 class Contact {
 
