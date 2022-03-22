@@ -6,12 +6,12 @@
 #    By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 16:38:43 by mannouao          #+#    #+#              #
-#    Updated: 2022/03/21 13:28:17 by mannouao         ###   ########.fr        #
+#    Updated: 2022/03/22 14:21:36 by mannouao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
-SRCS = 
+NAME = Account
+SRCS = Account.cpp tests.cpp
 OBJS = $(SRCS:.cpp=.o)
 CC = c++
 RM = rm -f

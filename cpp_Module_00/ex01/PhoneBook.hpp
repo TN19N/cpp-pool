@@ -6,12 +6,16 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:04:03 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/21 09:49:16 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/22 16:01:41 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
+
+# include <iostream>
+# include <iomanip>
+# include <string>
 
 # include "Contact.hpp"
 	
@@ -22,8 +26,8 @@ class PhoneBook {
 		
 	public :
 		int		number_of_contacts;
-		void 	add(void);
-		void 	search(void) const;
+		void	add(void);
+		void	search(void) const;
 };
 
 # endif

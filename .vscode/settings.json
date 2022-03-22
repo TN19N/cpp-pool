@@ -1,4 +1,5 @@
 {
+	"C_Cpp.errorSquiggles": "Disabled",
 	"files.associations": {
 		"__bit_reference": "cpp",
 		"__config": "cpp",
@@ -35,6 +36,7 @@
 		"exception": "cpp",
 		"functional": "cpp",
 		"initializer_list": "cpp",
+		"iomanip": "cpp",
 		"ios": "cpp",
 		"iosfwd": "cpp",
 		"iostream": "cpp",
@@ -59,8 +61,6 @@
 		"typeinfo": "cpp",
 		"unordered_map": "cpp",
 		"utility": "cpp",
-		"vector": "cpp",
-		"iomanip": "cpp"
-	},
-	"C_Cpp.errorSquiggles": "Disabled"
+		"vector": "cpp"
+	}
 }

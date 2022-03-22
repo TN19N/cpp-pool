@@ -1,67 +1,62 @@
+
 // ************************************************************************** //
 //                                                                            //
-//                tests.cpp for GlobalBanksters United                        //
-//                Created on  : Thu Nov 20 23:45:02 1989                      //
-//                Last update : Wed Jan 04 09:23:52 1992                      //
+//                Account.hpp for GlobalBanksters United                //
+//                Created on  : Thu Nov 20 19:43:15 1989                      //
+//                Last update : Wed Jan 04 14:54:06 1992                      //
 //                Made by : Brad "Buddy" McLane <bm@gbu.com>                  //
 //                                                                            //
 // ************************************************************************** //
 
-#include <vector>
-#include <algorithm>
-#include <functional>
-#include "Account.hpp"
+
+#pragma once
+#ifndef __ACCOUNT_H__
+#define __ACCOUNT_H__
+
+// ************************************************************************** //
+//                               Account Class                                //
+// ************************************************************************** //
+
+class Account {
 
 
-int		main( void ) {
+public:
 
-	typedef std::vector<Account::t>							  accounts_t;
-	typedef std::vector<int>								  ints_t;
-	typedef std::pair<accounts_t::iterator, ints_t::iterator> acc_int_t;
+	typedef Account		t;
 
-	int	const				amounts[]	= { 42, 54, 957, 432, 1234, 0, 754, 16576 };
-	size_t const			amounts_size( sizeof(amounts) / sizeof(int) );
-	accounts_t				accounts( amounts, amounts + amounts_size );
-	accounts_t::iterator	acc_begin	= accounts.begin();
-	accounts_t::iterator	acc_end		= accounts.end();
+	static int	getNbAccounts( void );
+	static int	getTotalAmount( void );
+	static int	getNbDeposits( void );
+	static int	getNbWithdrawals( void );
+	static void	displayAccountsInfos( void );
 
-	int	const			d[]			= { 5, 765, 564, 2, 87, 23, 9, 20 };
-	size_t const		d_size( sizeof(d) / sizeof(int) );
-	ints_t				deposits( d, d + d_size );
-	ints_t::iterator	dep_begin	= deposits.begin();
-	ints_t::iterator	dep_end		= deposits.end();
+	Account( int initial_deposit );
+	~Account( void );
 
-	int	const			w[]			= { 321, 34, 657, 4, 76, 275, 657, 7654 };
-	size_t const		w_size( sizeof(w) / sizeof(int) );
-	ints_t				withdrawals( w, w + w_size );
-	ints_t::iterator	wit_begin	= withdrawals.begin();
-	ints_t::iterator	wit_end		= withdrawals.end();
+	void	makeDeposit( int deposit );
+	bool	makeWithdrawal( int withdrawal );
+	int		checkAmount( void ) const;
+	void	displayStatus( void ) const;
 
-	Account::displayAccountsInfos();
-	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
-	for ( acc_int_t it( acc_begin, dep_begin );
-		  it.first != acc_end && it.second != dep_end;
-		  ++(it.first), ++(it.second) ) {
+private:
 
-		(*(it.first)).makeDeposit( *(it.second) );
-	}
+	static int	_nbAccounts;
+	static int	_totalAmount;
+	static int	_totalNbDeposits;
+	static int	_totalNbWithdrawals;
 
-	Account::displayAccountsInfos();
-	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
+	static void	_displayTimestamp( void );
 
-	for ( acc_int_t it( acc_begin, wit_begin );
-		  it.first != acc_end && it.second != wit_end;
-		  ++(it.first), ++(it.second) ) {
+	int				_accountIndex;
+	int				_amount;
+	int				_nbDeposits;
+	int				_nbWithdrawals;
 
-		(*(it.first)).makeWithdrawal( *(it.second) );
-	}
+	Account( void );
 
-	Account::displayAccountsInfos();
-	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
+};
 
-	return 0;
-}
 
 
 // ************************************************************************** //
@@ -70,3 +65,6 @@ int		main( void ) {
 // -*- mode: c++-mode;                                                       -*-
 // -*- fill-column: 75; comment-column: 75;                                  -*-
 // ************************************************************************** //
+
+
+#endif /* __ACCOUNT_H__ */
