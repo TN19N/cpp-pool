@@ -91,7 +91,7 @@ void Account::_displayTimestamp(void)
 	time(&current_time);
 	local = std::localtime(&current_time);
 	std::cout << "[" << local->tm_year + 1900
-					 << std::setw(2) << std::setfill('0') << local->tm_mon + 3
+					 << std::setw(2) << std::setfill('0') << local->tm_mon + 1
 					 << std::setw(2) << std::setfill('0') << local->tm_mday
 					 << "_" 
 					 << std::setw(2) << std::setfill('0') << local->tm_hour 
