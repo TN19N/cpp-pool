@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 09:12:40 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/21 13:20:31 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/23 07:34:48 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,10 +99,10 @@ void	PhoneBook::search(void) const {
 	int			i;
 	std::string	tmp_str;
 
-	std::cout << " --index--" << "|" << "First-name" << "|" << "last--name" << "|" << "-nickname-" << "|" << std::endl;
+	std::cout << "|" << " --index--" << "|" << "First-name" << "|" << "last--name" << "|" << "-nickname-" << "|" << std::endl;
 	for (int i = 0; i < this->number_of_contacts ; i++)
 	{
-		std::cout << " -- [" << i << "] --" << "|";
+		std::cout << "|" << " -- [" << i << "] --" << "|";
 		tmp_str = this->contacts[i].get_first_name();
 		if (tmp_str.length() > 10)
 		{

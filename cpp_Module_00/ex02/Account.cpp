@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 13:33:40 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/22 16:12:22 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/23 07:52:35 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ Account::Account(void)
 	this->_accountIndex = _nbAccounts++;
 	this->_nbWithdrawals = 0;
 	this->_nbDeposits = 0;
+	std::cout << "index:" << this->_accountIndex 
+			  << ";amount:" << checkAmount()
+			  << ";created" << std::endl;
 	return ;
 }
 
@@ -120,7 +123,6 @@ void Account::displayStatus(void) const
 void	Account::makeDeposit(int deposit)
 {
 	_displayTimestamp();
-	std::cout << this->_totalAmount << std::endl;
 	std::cout << "index:" << this->_accountIndex
 			  << ";p_amount:" << checkAmount()
 			  << ";deposit:" << deposit
