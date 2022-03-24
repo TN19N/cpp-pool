@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 07:41:27 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/24 09:19:19 by mannouao         ###   ########.fr       */
+/*   Created: 2022/03/24 08:53:25 by mannouao          #+#    #+#             */
+/*   Updated: 2022/03/24 09:21:56 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ class Zombie
 	private:
 		std::string name;
 	public:
-		Zombie( std::string name );
-		~Zombie( void );
-		void	announce( void );
+		Zombie(void);
+		~Zombie(void);
+		void	announce(void);
+		void	set_name(std::string const name);
 };
 
-Zombie	*newZombie( std::string name );
-void randomChump( std::string name );
+Zombie*	zombieHorde( int N, std::string name );
 
 #endif

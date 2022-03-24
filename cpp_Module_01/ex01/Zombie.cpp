@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 07:41:27 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/24 09:19:19 by mannouao         ###   ########.fr       */
+/*   Created: 2022/03/24 08:53:28 by mannouao          #+#    #+#             */
+/*   Updated: 2022/03/24 09:22:30 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
+# include "Zombie.hpp"
 
-# define ZOMBIE_HPP
-
-# include <string>
-# include <iostream>
-
-class Zombie
+void	Zombie::set_name(std::string const name)
 {
-	private:
-		std::string name;
-	public:
-		Zombie( std::string name );
-		~Zombie( void );
-		void	announce( void );
-};
+	this->name = name;
+}
 
-Zombie	*newZombie( std::string name );
-void randomChump( std::string name );
+Zombie::~Zombie(void)
+{
+	std::cout << this->name << ": is died again" << std::endl;	
+}
 
-#endif
+Zombie::Zombie(void)
+{
+	std::cout << "zombie is spawned" << std::endl;
+}
+
+void	Zombie::announce(void)
+{
+	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
