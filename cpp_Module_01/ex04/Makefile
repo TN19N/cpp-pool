@@ -6,12 +6,12 @@
 #    By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 16:38:43 by mannouao          #+#    #+#              #
-#    Updated: 2022/03/24 12:48:31 by mannouao         ###   ########.fr        #
+#    Updated: 2022/03/24 15:50:03 by mannouao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Weapon
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+NAME = replace
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 CC = c++
 RM = rm -f
@@ -26,7 +26,7 @@ $(NAME) : $(OBJS)
 	$(CC) $(CFLAGS) -c $<
 
 clean :
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) *.replace
 
 fclean : clean
 	$(RM) $(NAME)
