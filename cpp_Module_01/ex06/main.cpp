@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 07:41:33 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/25 11:47:13 by mannouao         ###   ########.fr       */
+/*   Created: 2022/03/25 07:41:37 by mannouao          #+#    #+#             */
+/*   Updated: 2022/03/25 11:34:50 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
+# include "Harl.hpp"
 
-# define HARL_HPP
-
-# include <string>
-# include <iostream>
-
-class Harl
+int main(int ac, char *av[])
 {
-	private:
-		void	debug( void );
-		void	info( void );
-		void	warning( void );
-		void	error( void );
-	public:
-		void	complain( std::string level );
-};
+	Harl	harl;
 
-#endif
+	if (ac == 2)
+		harl.complain(av[1]);
+	else
+		std::cout << "usage: ./harlFilter (level)" << std::endl;
+}

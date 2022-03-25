@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 07:41:35 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/25 11:47:27 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/25 11:55:23 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,27 @@ void Harl::error( void )
 
 void    Harl::complain( std::string level )
 {
+	int	index = -1;
 	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	typedef	void(Harl::*f)(void);
-	f f_arr[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-
-	for (int i = 0; i < 4; i++)
+	while (++index < 4)
+		if (level == levels[index])
+			break;
+	switch (index)
 	{
-		if (level == levels[i])
-		{
-			(this->*f_arr[i])();
-			return ;
-		}
+	case 0:
+		this->debug();
+		break;
+	case 1:
+		this->info();
+		break;
+	case 2:
+		this->warning();
+		break;
+	case 3:
+		this->error();
+		break;
+	default:
+		std::cout << "no such level" << std::endl;
+		break;
 	}
-	std::cout << "no such level" << std::endl;
 }

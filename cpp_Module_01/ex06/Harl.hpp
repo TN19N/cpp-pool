@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 07:41:33 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/25 11:47:13 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/25 07:49:58 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@
 class Harl
 {
 	private:
-		void	debug( void );
-		void	info( void );
-		void	warning( void );
-		void	error( void );
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
 	public:
-		void	complain( std::string level );
+		void    complain( std::string level );
 };
 
 #endif
