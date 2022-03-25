@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:41:47 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/25 07:26:13 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/25 14:36:16 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,11 @@ int main(int ac, char *av[])
 		return (1);
 	}
 	out_fs.open(out_file.c_str());
+	if (!out_fs)
+	{
+		std::cout << "cant open in file" << std::endl;
+		return (1);
+	}
 	while (std::getline(in_fs, buffer))
 	{
 		start_pos = 0;
