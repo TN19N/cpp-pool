@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:41:47 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/24 20:14:31 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/25 07:26:13 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,18 @@ int main(int ac, char *av[])
 	out_fs.open(out_file.c_str());
 	while (std::getline(in_fs, buffer))
 	{
-		start_pos = buffer.find(to_change, 0);
-		if (start_pos != std::string::npos)
+		start_pos = 0;
+		while (1337)
 		{
-			buffer.erase(start_pos, to_change.length());
-			buffer.insert(start_pos, to_change_to.c_str(), to_change_to.length());
+			start_pos = buffer.find(to_change, start_pos);
+			if (start_pos != std::string::npos)
+			{
+				buffer.erase(start_pos, to_change.length());
+				buffer.insert(start_pos, to_change_to.c_str(), to_change_to.length());
+				start_pos += to_change_to.length();
+			}
+			else
+				break;
 		}
 		out_fs << buffer;
 		if (!in_fs.eof())
