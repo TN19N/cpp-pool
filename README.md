@@ -10,3 +10,8 @@ stuff
 
 ### these module about
 Memory allocation, pointers to members, references, switch statement
+
+## cpp_Module_02
+
+### these module about
+Ad-hoc polymorphism, operator overloading and Orthodox Canonical class form
