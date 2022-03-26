@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 10:37:44 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/25 16:53:26 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/26 09:57:13 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define WEAPON_HPP
 
 # include <string>
+# include <iostream>
 
 class Weapon
 {

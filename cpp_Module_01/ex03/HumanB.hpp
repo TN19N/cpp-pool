@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 10:37:50 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/24 13:16:38 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/26 09:09:39 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class HumanB
 		Weapon		*weapon;
 	public:
 		HumanB(std::string const name)
-			: name(name) {};
+			: name(name), weapon(NULL) {};
 		void	setWeapon(Weapon &Weapon);
 		void	attack(void);
 };

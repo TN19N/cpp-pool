@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:41:47 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/25 14:36:16 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/26 10:46:13 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main(int ac, char *av[])
 	in_fs.open(in_file.c_str());
 	if (!in_fs)
 	{
-		std::cout << "no such file to read frome" << std::endl;
+		std::cout << "invalid file to read from" << std::endl;
 		return (1);
 	}
 	out_fs.open(out_file.c_str());
