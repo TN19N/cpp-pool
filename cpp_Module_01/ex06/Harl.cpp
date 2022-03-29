@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 07:41:35 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/25 21:09:46 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/28 18:15:19 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,6 @@ void    Harl::complain( std::string level )
 		this->error();
 		break;
 	default:
-		std::cout << "no such level" << std::endl;
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }

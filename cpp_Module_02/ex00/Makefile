@@ -6,12 +6,12 @@
 #    By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 16:38:43 by mannouao          #+#    #+#              #
-#    Updated: 2022/03/24 10:37:31 by mannouao         ###   ########.fr        #
+#    Updated: 2022/03/29 09:00:58 by mannouao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Zombie
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+NAME = Fixed
+SRCS = main.cpp Fixed.cpp 
 OBJS = $(SRCS:.cpp=.o)
 CC = c++
 RM = rm -f

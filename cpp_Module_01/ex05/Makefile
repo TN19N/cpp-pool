@@ -6,7 +6,7 @@
 #    By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 16:38:43 by mannouao          #+#    #+#              #
-#    Updated: 2022/03/25 09:29:40 by mannouao         ###   ########.fr        #
+#    Updated: 2022/03/28 18:06:48 by mannouao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ $(NAME) : $(OBJS)
 	$(CC) $(CFLAGS) -c $<
 
 clean :
-	$(RM) $(OBJS) *.replace
+	$(RM) $(OBJS)
 
 fclean : clean
 	$(RM) $(NAME)
