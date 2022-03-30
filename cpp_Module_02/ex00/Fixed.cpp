@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 07:06:59 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/29 09:28:01 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/30 08:32:57 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,9 @@ void	Fixed::setRawBits(int const raw)
 	this->number = raw;
 }
 
-void	Fixed::operator=(Fixed const &other)
+Fixed&	Fixed::operator=(Fixed const &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	this->number = other.number;
+	return (*this);
 }
