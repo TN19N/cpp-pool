@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 07:06:27 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/30 10:08:55 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/03/31 09:48:41 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class Fixed
 {
 	private:
-		int					number;
+		int					raw;
 		static int const	bits = 8;
 	public:
 		Fixed(void);

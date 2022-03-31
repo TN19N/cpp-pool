@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 07:06:27 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/31 09:48:14 by mannouao         ###   ########.fr       */
+/*   Created: 2022/03/31 07:48:19 by mannouao          #+#    #+#             */
+/*   Updated: 2022/03/31 14:20:37 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
+# include "Point.hpp"
 
-# define FIXED_HPP
-
-# include <iostream>
-
-class Fixed
+int main(void)
 {
-	private:
-		int					raw;
-		static int const	bits = 8;
-	public:
-		Fixed(void);
-		Fixed(Fixed const &other);
-		~Fixed(void);
-		Fixed&	operator=(Fixed const &other);
-		
-		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
-};
+	Point a(1, 2);
+	Point b(-2, 3);
+	Point c(0, 0);
 
-#endif
+	Point p(0, 10);
+	if (bsp(a, b, c, p))
+		std::cout << "the point is in inside" << std::endl;
+	else
+		std::cout << "the point is not in inside" << std::endl;
+}

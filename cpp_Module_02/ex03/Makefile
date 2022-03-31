@@ -6,12 +6,12 @@
 #    By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 16:38:43 by mannouao          #+#    #+#              #
-#    Updated: 2022/03/29 09:00:58 by mannouao         ###   ########.fr        #
+#    Updated: 2022/03/31 06:32:58 by mannouao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Fixed
-SRCS = main.cpp Fixed.cpp 
+SRCS = main.cpp Fixed.cpp Point.cpp bsp.cpp 
 OBJS = $(SRCS:.cpp=.o)
 CC = c++
 RM = rm -f

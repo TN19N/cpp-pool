@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 07:06:27 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/31 09:48:14 by mannouao         ###   ########.fr       */
+/*   Created: 2022/03/31 06:12:30 by mannouao          #+#    #+#             */
+/*   Updated: 2022/03/31 11:04:02 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
+# include "Point.hpp"
 
-# define FIXED_HPP
-
-# include <iostream>
-
-class Fixed
+Point::Point(const Point& other)
 {
-	private:
-		int					raw;
-		static int const	bits = 8;
-	public:
-		Fixed(void);
-		Fixed(Fixed const &other);
-		~Fixed(void);
-		Fixed&	operator=(Fixed const &other);
-		
-		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
-};
+	*this = other;
+}
 
-#endif
+Point&	Point::operator=(const Point& other)
+{
+	*const_cast<Fixed*> (&this->x) = other.x;
+	*const_cast<Fixed*> (&this->y) = other.y;
+	return (*this);
+}
+
+Point::~Point(void)
+{
+	
+}
+
+const Fixed& Point::get_x(void) const
+{
+	return (this->x);
+}
+
+const Fixed& Point::get_y(void) const
+{
+	return (this->y);
+}
