@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 07:06:59 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/31 09:54:17 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/01 16:54:46 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ int	Fixed::toInt(void) const
 	return (this->raw >> this->bits);
 }
 
+// >, <, >=, <=, ==, !=
+
 bool	Fixed::operator>(const Fixed& other) const
 {
 	return (this->raw > other.getRawBits());
@@ -86,7 +88,9 @@ bool	Fixed::operator!=(const Fixed& other) const
 	return (!(*this == other));
 }
 
-Fixed	Fixed::operator+(const Fixed& other)
+// +, -, *, /
+
+Fixed	Fixed::operator+(const Fixed& other) const
 {
 	Fixed	tmp;
 
@@ -94,7 +98,7 @@ Fixed	Fixed::operator+(const Fixed& other)
 	return (tmp);
 }
 
-Fixed	Fixed::operator-(const Fixed& other)
+Fixed	Fixed::operator-(const Fixed& other) const
 {
 	Fixed	tmp;
 
@@ -102,7 +106,7 @@ Fixed	Fixed::operator-(const Fixed& other)
 	return (tmp);
 }
 
-Fixed	Fixed::operator*(const Fixed& other)
+Fixed	Fixed::operator*(const Fixed& other) const
 {
 	Fixed	tmp;
 
@@ -110,13 +114,15 @@ Fixed	Fixed::operator*(const Fixed& other)
 	return (tmp);
 }
 
-Fixed	Fixed::operator/(const Fixed& other)
+Fixed	Fixed::operator/(const Fixed& other) const
 {
 	Fixed	tmp;
 
-	tmp.setRawBits((this->raw / other.getRawBits()) >> this->bits);
+	tmp.setRawBits(std::round(((float)this->raw / (float)other.getRawBits()) * (1 << this->bits)));
 	return (tmp);
 }
+
+// a++, ++a, a-- , --a
 
 Fixed&	Fixed::operator++(void)
 {
@@ -143,6 +149,8 @@ Fixed	Fixed::operator--(int)
 	--(*this);
 	return (tmp);
 }
+
+// min, max
 
 const Fixed&	Fixed::min(Fixed& fix_1, Fixed& fix_2)
 {

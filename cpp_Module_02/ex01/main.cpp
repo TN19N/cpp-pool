@@ -6,13 +6,14 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 08:39:29 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/30 13:16:38 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/01 13:57:24 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Fixed.hpp"
 
-int	main( void ) {
+int	main( void )
+{
 	Fixed a;
 	Fixed const b( 10 );
 	Fixed const c( 42.42f );
