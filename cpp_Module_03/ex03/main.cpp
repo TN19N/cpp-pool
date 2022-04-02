@@ -6,33 +6,26 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:15:12 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/02 09:27:04 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/02 15:49:00 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ClapTrap.hpp"
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
+# include "DiamondTrap.hpp"
 
 int main()
 {
-	ScavTrap Hero("Hero");
-
-	Hero.attack("Enemy");
+	DiamondTrap	Hero("Hero");
+	
+	Hero.attack("enemy");
+	Hero.takeDamage(20);
 	Hero.beRepaired(10);
 	Hero.guardGate();
-	Hero.takeDamage(66666);
-	Hero.attack("last Enemy");
-	Hero.guardGate();
-
-	std::cout << std::endl << "************************" << std::endl << std::endl;
-
-	FragTrap Enemy("Hero");
-
-	Enemy.attack("Human");
-	Enemy.beRepaired(10);
-	Enemy.highFivesGuys();
-	Enemy.takeDamage(66666);
-	Enemy.attack("last Human");
-	Enemy.highFivesGuys();
+	Hero.highFivesGuys();
+	Hero.whoAmI();
+	Hero.takeDamage(9999);
+	Hero.attack("last one");
+	Hero.whoAmI();
 }
