@@ -15,3 +15,8 @@ Memory allocation, pointers to members, references, switch statement
 
 ### these module about
 Ad-hoc polymorphism, operator overloading and Orthodox Canonical class form
+
+## cpp_Module_03
+
+### these module about
+Inheritance
