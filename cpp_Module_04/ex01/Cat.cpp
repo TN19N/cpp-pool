@@ -1,41 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongWrongCat.cpp                                       :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 23:38:49 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/03 13:33:56 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/03 16:09:08 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "WrongCat.hpp"
+# include "Cat.hpp"
 
-WrongCat::WrongCat(void)
+Cat::Cat(void)
 {
-	std::cout << "WrongCat  Default constructor called" << std::endl;
-	this->type = "WrongCat";
+	std::cout << "Cat  Default constructor called" << std::endl;
+	this->brain = new Brain();
+	this->type = "Cat";
 }
 
-WrongCat::WrongCat(const WrongCat& other)
+Cat::Cat(const Cat& other)
 {
-	std::cout << "WrongCat Copy constructor called" << std::endl;
+	std::cout << "Cat Copy constructor called" << std::endl;
+	this->brain = new Brain();
 	*this = other;
 }
 
-WrongCat&	WrongCat::operator=(const WrongCat& other)
+Cat&	Cat::operator=(const Cat& other)
 {
 	this->type = other.type;
+	*(this->brain) = *(other.brain);
 	return (*this);
 }
 
-WrongCat::~WrongCat(void)
+Cat::~Cat(void)
 {
-	std::cout << "WrongCat destructor called" << std::endl;
+	delete this->brain;
+	std::cout << "Cat destructor called" << std::endl;
 }
 
-void	WrongCat::makeSound(void) const
+void	Cat::makeSound(void) const
 {
-	std::cout << "WrongCat : WrongCat sound (meaw meaw ...)" << std::endl;
+	std::cout << "Cat : Cat sound (meaw meaw ...)" << std::endl;
 }

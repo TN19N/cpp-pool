@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 23:38:49 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/03 13:05:20 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/03 13:41:20 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ Cat::~Cat(void)
 
 void	Cat::makeSound(void) const
 {
-	std::cout << "Cat : Cat sound (braw braw ...)" << std::endl;
+	std::cout << "Cat : Cat sound (meaw meaw ...)" << std::endl;
 }

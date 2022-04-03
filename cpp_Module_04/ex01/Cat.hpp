@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 23:44:47 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/03 16:55:27 by mannouao         ###   ########.fr       */
+/*   Created: 2022/04/02 23:33:13 by mannouao          #+#    #+#             */
+/*   Updated: 2022/04/03 15:54:09 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Cat.hpp"
-# include "Dog.hpp"
+#ifndef CAT_CPP
+
+# define	CAT_CPP
+
 # include "Animal.hpp"
+# include <string>
+# include <iostream>
+# include "Brain.hpp"
 
-int main()
+class Cat : public Animal
 {
-	Animal *animals[10];
+	private:
+		Brain*	brain;
+	public:
+		Cat(void);
+		Cat(const Cat& other);
+		Cat&	operator=(const Cat& other);
+		~Cat(void);
 
-	for (int i = 0; i < 10; i++)
-	{
-		if (i % 2)
-			animals[i] = new Dog();
-		else
-			animals[i] = new Cat();
-	}
-	
-	for (int i = 0; i < 10; i++)
-		animals[i]->makeSound();
-	for (int i = 0; i < 10; i++)
-		delete animals[i];
+		void	makeSound(void) const;
+};
 
-	std::cout << std::endl << "******************" << std::endl << std::endl;
-
-	Dog h;
-	{
-		Dog f(h);
-	}
-	//system("leaks Animal");
-}
+#endif
