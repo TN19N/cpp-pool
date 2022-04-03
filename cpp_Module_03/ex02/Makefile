@@ -6,11 +6,11 @@
 #    By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 16:38:43 by mannouao          #+#    #+#              #
-#    Updated: 2022/04/02 09:26:18 by mannouao         ###   ########.fr        #
+#    Updated: 2022/04/02 23:18:00 by mannouao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed
+NAME = Clap
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 CC = c++

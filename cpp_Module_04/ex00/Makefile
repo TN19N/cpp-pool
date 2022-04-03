@@ -6,16 +6,16 @@
 #    By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 16:38:43 by mannouao          #+#    #+#              #
-#    Updated: 2022/04/02 23:18:03 by mannouao         ###   ########.fr        #
+#    Updated: 2022/04/03 13:37:23 by mannouao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Clap
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
+NAME = Animal
+SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS = $(SRCS:.cpp=.o)
 CC = c++
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -std=c++98 #-Wshadow-all
+CFLAGS = -Wall -Wextra -Werror -std=c++98 
 
 all : $(NAME)
 
