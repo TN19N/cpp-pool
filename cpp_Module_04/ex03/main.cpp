@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 02:51:38 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/05 01:30:09 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/05 03:52:52 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void ft_main()
     tmp = src->createMateria("cure");
     me->equip(tmp);
 	me->unequip(1);
+	delete tmp;
 	ICharacter* bob = new Character("bob");
 	me->use(0, *bob);
     me->use(1, *bob);

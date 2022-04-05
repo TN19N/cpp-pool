@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 21:04:39 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/05 01:19:14 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/05 13:42:18 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Character::~Character(void)
 
 Character& Character::operator = (const Character& other)
 {
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		if (this->materias[i])
 			delete this->materias[i];
