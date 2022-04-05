@@ -25,3 +25,8 @@ Inheritance
 
 ### these module about
 Subtype polymorphism, abstract classes, interfaces
+
+## cpp_Module_05
+
+### these module about
+Repetition and Exceptions
