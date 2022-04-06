@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 14:13:28 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/06 16:31:20 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/06 18:10:25 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,10 @@ void Bureaucrat::executeForm(const Form& form) const
 	else if (this->grade > form.getReqExec())
 		std::cout << this->name << " can't execute the form because he's grade is low ." << std::endl;
 	else
+	{
+		std::cout << this->name << " executed " << form.getName() << "." << std::endl;
 		form.execute(*this);
+	}
 }
 
 std::ostream& operator<<(std::ostream& _cout, const Bureaucrat& other)
