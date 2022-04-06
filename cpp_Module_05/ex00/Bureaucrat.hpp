@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 14:09:51 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/05 22:58:53 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/06 01:51:37 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@
 # include <iostream>
 # include <string>
 
+
 class Bureaucrat
 {
 	private:
-		std::string name;
-		int			grade;
+		const std::string name;
+		int		  grade;
 	public:
 		Bureaucrat(void);
 		Bureaucrat(const std::string& name, const int grade);

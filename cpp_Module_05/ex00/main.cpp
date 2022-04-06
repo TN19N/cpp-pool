@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 14:25:32 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/05 21:57:30 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/06 01:14:03 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int main()
 		b.decrementGrade();
 		b.decrementGrade();
 		b.incrementGrade();
+		std::cout << b << std::endl;
 	}
 	catch (std::exception& e)
 	{
