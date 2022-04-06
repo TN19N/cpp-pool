@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 14:25:32 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/06 14:48:15 by mannouao         ###   ########.fr       */
+/*   Created: 2022/04/06 14:15:17 by mannouao          #+#    #+#             */
+/*   Updated: 2022/04/06 14:16:20 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef RPBOTOMYREQUESTFORM_HPP
+
+#define RPBOTOMYREQUESTFORM_HPP
+
+# include <string>
 # include "Form.hpp"
-# include "Bureaucrat.hpp"
-# include "ShrubberyCreationForm.hpp"
-# include "RobotomyRequestForm.hpp"
-# include "PresidentialPardonForm.hpp"
 
-int main()
+class RobotomyRequestForm : public Form
 {
-	try
-	{
-		Bureaucrat b("HH", 137);
-		ShrubberyCreationForm form;
+	private:
+		std::string target;
+	public:
+		RobotomyRequestForm(void);
+		RobotomyRequestForm(const std::string& target);
+		RobotomyRequestForm(const RobotomyRequestForm& other);
+		~RobotomyRequestForm(void);
 
-		form.beSigned(b);
-		form.execute(b);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-}
+		RobotomyRequestForm& operator = (const RobotomyRequestForm& other);
+};
+
+#endif

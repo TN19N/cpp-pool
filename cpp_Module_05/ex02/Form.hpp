@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 23:01:52 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/06 01:50:32 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/06 14:29:36 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Form
 		Form(void);
 		Form(const std::string& name, const int& req_sign, const int& req_exec);
 		Form(const Form& other);
-		~Form(void);
+		virtual ~Form(void);
 
 		Form& operator = (const Form& other);
 
@@ -42,6 +42,9 @@ class Form
 
 		void beSigned(const Bureaucrat& bur);
 
+		void execute(const Bureaucrat& execute) const;
+		virtual void ActiveForm(void) const = 0; 
+		
 		class GradeTooHighException : public std::exception
 		{
 			const char* what() const throw()
@@ -55,6 +58,14 @@ class Form
 			const char* what() const throw()
 			{
 				return ("Grade is Too Low");
+			}
+		};
+		
+		class FormNotSignedException : public std::exception
+		{
+			const char* what() const throw()
+			{
+				return ("Form not signed to execute it");
 			}
 		};
 };

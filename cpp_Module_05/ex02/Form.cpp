@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 00:09:23 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/06 01:24:10 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/06 14:29:28 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ Form::Form(const std::string& name, const int& req_sign, const int& req_exec)
 }
 
 Form::Form(const Form& other)
-	: name("default_name"), req_sign(150), req_exec(150)
+	: name(other.name),
+	  req_sign(other.req_sign),
+	  req_exec(other.req_exec)
 {
-	*this = other;
+	this->is_sign = other.is_sign;
 }
 
 Form::~Form(void)
@@ -41,7 +43,10 @@ Form::~Form(void)
 
 Form& Form::operator = (const Form& other)
 {
+	*const_cast<std::string*> (&this->name) = other.name;
 	this->is_sign = other.is_sign;
+	*const_cast<int*> (&this->req_sign) = other.req_sign;
+	*const_cast<int*> (&this->req_exec) = other.req_exec;
 	return (*this);
 }
 
@@ -71,6 +76,16 @@ void Form::beSigned(const Bureaucrat& bur)
 		this->is_sign = true;
 	else
 		throw (Form::GradeTooLowException());
+}
+
+void Form::execute(const Bureaucrat& executor) const
+{
+	if (this->is_sign == false)
+		throw (Form::FormNotSignedException());
+	else if (executor.getGrade() > this->req_exec)
+		throw (Form::GradeTooLowException());
+	else
+		this->ActiveForm();
 }
 
 std::ostream& operator << (std::ostream& _cout, const Form& othre)

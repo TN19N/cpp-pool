@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 14:13:28 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/06 02:26:02 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/06 13:35:05 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ Bureaucrat::Bureaucrat(const std::string& name, const int grade)
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other)
-	:name("default_name")
 {
 	*this = other;
 }
@@ -41,6 +40,7 @@ Bureaucrat::~Bureaucrat(void)
 
 Bureaucrat& Bureaucrat::operator = (const Bureaucrat& other)
 {
+	*const_cast<std::string*> (&this->name) = other.name;
 	this->grade = other.grade;
 	return (*this);
 }
