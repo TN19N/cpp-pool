@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 14:15:17 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/06 14:59:46 by mannouao         ###   ########.fr       */
+/*   Created: 2022/04/06 02:31:45 by mannouao          #+#    #+#             */
+/*   Updated: 2022/04/06 14:32:52 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RPBOTOMYREQUESTFORM_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
 
-#define RPBOTOMYREQUESTFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
 
+# include <fstream>
+# include <iostream>
 # include <string>
 # include "Form.hpp"
 
-class RobotomyRequestForm : public Form
+class ShrubberyCreationForm : public Form
 {
 	private:
 		std::string target;
 	public:
-		RobotomyRequestForm(void);
-		RobotomyRequestForm(const std::string& target);
-		RobotomyRequestForm(const RobotomyRequestForm& other);
-		~RobotomyRequestForm(void);
+		ShrubberyCreationForm(void);
+		ShrubberyCreationForm(const std::string& target);
+		ShrubberyCreationForm(const ShrubberyCreationForm& other);
+		~ShrubberyCreationForm(void);
 
 		void ActiveForm(void) const;
-
-		RobotomyRequestForm& operator = (const RobotomyRequestForm& other);
+			
+		ShrubberyCreationForm& operator = (const ShrubberyCreationForm& other);
 };
 
 #endif
