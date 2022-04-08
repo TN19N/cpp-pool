@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 23:57:56 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/08 13:41:36 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/08 16:00:29 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int main(int ac, char *av[])
 		_char = av[1][0];
 		_int = static_cast<int> (av[1][0]);
 		_float = static_cast<float> (av[1][0]);
-		_double = static_cast<float> (av[1][0]);
+		_double = static_cast<double> (av[1][0]);
 	}
 	else if (type == DOUBLE)
 	{
@@ -99,16 +99,12 @@ int main(int ac, char *av[])
 	// -----------------------------------
 
 	std::cout << "float : ";
-	if (isnan(_double) && av[1][0] == '-')
-		std::cout << "-";
 	std::cout << std::fixed << std::setprecision(1) << _float << 'f';
 	std::cout << std::endl;
 	
 	// ------------------------------------
 
 	std::cout << "double : ";
-	if (isnan(_double) && av[1][0] == '-')
-		std::cout << "-";
 	std::cout << std::fixed  << std::setprecision(1) << _double;
 	std::cout << std::endl;
 
