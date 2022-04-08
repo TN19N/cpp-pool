@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 23:57:56 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/08 00:10:54 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/08 13:41:36 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,13 +99,17 @@ int main(int ac, char *av[])
 	// -----------------------------------
 
 	std::cout << "float : ";
-	std::cout << _float << 'f';
+	if (isnan(_double) && av[1][0] == '-')
+		std::cout << "-";
+	std::cout << std::fixed << std::setprecision(1) << _float << 'f';
 	std::cout << std::endl;
 	
 	// ------------------------------------
 
 	std::cout << "double : ";
-	std::cout << _double;
+	if (isnan(_double) && av[1][0] == '-')
+		std::cout << "-";
+	std::cout << std::fixed  << std::setprecision(1) << _double;
 	std::cout << std::endl;
 
 	return (0);

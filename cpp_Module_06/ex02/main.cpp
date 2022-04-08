@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 20:56:50 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/07 23:45:02 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/08 13:52:00 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void identify(Base& p)
 		(void)dynamic_cast<A&> (p);
 		std::cout << "A" << std::endl;
 	}
-	catch (std::exception& e)
+	catch (const std::exception& e)
 	{
 		try
 		{

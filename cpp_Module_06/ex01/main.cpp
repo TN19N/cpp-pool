@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 17:56:18 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/07 20:55:05 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/08 13:48:40 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,5 @@ int main()
 
 	delete t_d;
 	delete o_d;
-	// delete d
+	//delete d;
 }
