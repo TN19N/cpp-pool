@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 23:57:56 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/07 17:53:56 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:10:54 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ int find_type(char *str)
 	double _tmp;
 
 	_tmp = std::strtod(str, &ptr);
-	if ((ptr == &str[std::strlen(str)] || (*ptr == 'f' && str[0] != 'f' && ptr == &str[std::strlen(str) - 1])) && std::strlen(str) != 0)
+	
+	if ((ptr == &str[std::strlen(str)] || (*ptr == 'f' && str[0] != 'f' && ptr == &str[std::strlen(str) - 1])) && !std::isspace(str[0]))
 		return (DOUBLE);
 	else if (std::strlen(str) > 1)
 		return (0);
