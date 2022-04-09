@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:28:12 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/08 15:30:13 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/09 14:12:26 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,12 @@
 
 
 template<typename T>
-void iter(T *array, int len, )
+void iter(T *array, int len, void (*f)(const T&))
+{
+	if (array)
+		for (int i = 0; i < len; i++)
+			f(array[i]);
+}
 
 
 # endif
