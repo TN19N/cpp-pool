@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 23:01:52 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/06 14:29:36 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/09 22:41:54 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,26 +47,29 @@ class Form
 		
 		class GradeTooHighException : public std::exception
 		{
-			const char* what() const throw()
-			{
-				return ("Grade is Too High");
-			}
+			public:
+				const char* what() const throw()
+				{
+					return ("Grade is Too High");
+				}
 		};
 		
 		class GradeTooLowException : public std::exception
 		{
-			const char* what() const throw()
-			{
-				return ("Grade is Too Low");
-			}
+			public:
+				const char* what() const throw()
+				{
+					return ("Grade is Too Low");
+				}
 		};
 		
 		class FormNotSignedException : public std::exception
 		{
-			const char* what() const throw()
-			{
-				return ("Form not signed to execute it");
-			}
+			public:
+				const char* what() const throw()
+				{
+					return ("Form not signed to execute it");
+				}
 		};
 };
 

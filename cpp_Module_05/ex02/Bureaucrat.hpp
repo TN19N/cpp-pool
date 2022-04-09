@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 14:09:51 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/06 16:32:58 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/09 22:41:31 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,20 @@ class Bureaucrat
 
 		class GradeTooHighException : public std::exception
 		{
-			const char* what() const throw()
-			{
-				return ("Grade is Too High");
-			}
+			public:
+				const char* what() const throw()
+				{
+					return ("Grade is Too High");
+				}
 		};
 		
 		class GradeTooLowException : public std::exception
 		{
-			const char* what() const throw()
-			{
-				return ("Grade is Too Low");
-			}
+			public:
+				const char* what() const throw()
+				{
+					return ("Grade is Too Low");
+				}
 		};
 };
 
