@@ -1,5 +1,7 @@
 # cpp-pool
 
+The goal of these modules is to introduce me to Object-Oriented Programming
+
 ## 0️⃣ cpp_Module_00
 
 ### these module about
