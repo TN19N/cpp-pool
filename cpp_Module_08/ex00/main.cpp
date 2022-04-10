@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 14:59:44 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/09 22:57:15 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/10 15:07:52 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main()
 
 	try
 	{
-		std::cout << "find : " << easyfind(vec, 1337) << std::endl;
+		std::cout << easyfind(vec, 1337) << std::endl;
 	}
 	catch (std::exception& e)
 	{
@@ -42,7 +42,7 @@ int main()
 
 	try
 	{
-		std::cout << "find : " << easyfind(les, -1337) << std::endl;
+		std::cout << easyfind(les, -1337) << std::endl;
 	}
 	catch (std::exception& e)
 	{

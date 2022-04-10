@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 07:06:27 by mannouao          #+#    #+#             */
-/*   Updated: 2022/03/31 09:48:14 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/10 16:55:06 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class Fixed
 {
-	private:
+	sp.addNumber(11);:
 		int					raw;
 		static int const	bits = 8;
 	public:

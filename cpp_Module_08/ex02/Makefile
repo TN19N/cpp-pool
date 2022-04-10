@@ -6,12 +6,12 @@
 #    By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 16:38:43 by mannouao          #+#    #+#              #
-#    Updated: 2022/04/09 23:41:20 by mannouao         ###   ########.fr        #
+#    Updated: 2022/04/09 14:43:11 by mannouao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ex
-SRCS = main.cpp Span.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 CC = c++
 RM = rm -f

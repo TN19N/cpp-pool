@@ -6,7 +6,7 @@
 /*   By: mannouao <mannouao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 15:01:19 by mannouao          #+#    #+#             */
-/*   Updated: 2022/04/09 22:51:50 by mannouao         ###   ########.fr       */
+/*   Updated: 2022/04/10 15:06:37 by mannouao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,11 @@ class NotFindExeption : public std::exception
 template <typename T>
 int easyfind(const T& to_serach, int to_find)
 {
-	if (std::find(to_serach.begin(), to_serach.end(), to_find) != to_serach.end())
-		return (*std::find(to_serach.begin(), to_serach.end(), to_find));
+	typename T::const_iterator iter;
+
+	iter = std::find(to_serach.begin(), to_serach.end(), to_find);
+	if (iter != to_serach.end())
+		return (*iter);
 	else
 		throw(NotFindExeption());
 }
